@@ -20,7 +20,7 @@ Your goal will be to build a simplified version of Omnicalc.
 
 The way it should work is:
 
- - If I visit a URL of the pattern
+ - If I visit an address of the pattern
 
     ```
     /flexible/square/:number
@@ -28,7 +28,7 @@ The way it should work is:
 
     I should see the square of the number in the third segment of the path.
 
- - If I visit a URL of the pattern
+ - If I visit an address of the pattern
 
    ```
    /flexible/square_root/:number
@@ -36,7 +36,7 @@ The way it should work is:
 
    I should see the square root of the number in the third segment of the path.
 
- - If I visit a URL of the pattern
+ - If I visit an address of the pattern
 
    ```
    /flexible/payment/:basis_points/:number_of_years/:present_value
@@ -50,7 +50,7 @@ The way it should work is:
 
         ![Payment formula](payment_formula.gif?raw=true "Payment formula")
 
- - If I visit a URL of the pattern
+ - If I visit an address of the pattern
 
    ```
    /flexible/random/:min/:max
@@ -60,25 +60,25 @@ The way it should work is:
 
 ### Examples
 
- - If I visit [http://localhost:3000/flexible/square/5](http://localhost:3000/flexible/square/5), I should see something like
+ - If I visit `/flexible/square/5`, I should see something like
 
     > ## Flexible Square
     >
     > The square of 5 is 25.
 
- - If I visit [http://localhost:3000/flexible/square_root/8](http://localhost:3000/flexible/square_root/8), I should see something like
+ - If I visit `/flexible/square_root/8`, I should see something like
 
     > ## Flexible Square Root
     >
     > The square root of 8.0 is 2.83.
 
- - If I visit [http://localhost:3000/flexible/payment/410/30/250000](http://localhost:3000/flexible/payment/410/30/250000), I should see something like
+ - If I visit `/flexible/payment/410/30/250000`, I should see something like
 
     > ## Flexible Payment
     >
     > A 30 year loan of $250,000, with an annual interest rate of 4.10%, requires a monthly payment of $1,208.00.
 
- - If I visit [http://localhost:3000/flexible/random/50/100](http://localhost:3000/flexible/random/50/100), I should see something like
+ - If I visit `/flexible/random/50/100`, I should see something like
 
     > ## Flexible Random Number
     >
@@ -100,18 +100,17 @@ Now, let's build something a little more realistic. **We don't want to type inpu
 
 The way it should work is:
 
- - If I visit the URL [http://localhost:3000/square/new](http://localhost:3000/square/new), I should see a form with a label and an input to enter a number. (Since we're no longer typing into the address bar, we can use decimals and are no longer limited to integers. Yay!)
+ - If I visit `/square/new`, I should see a form with a label and an input to enter a number. (Since we're no longer typing into the address bar, we can use decimals and are no longer limited to integers. Yay!)
     - If I submit that form, I should see the square of the number that I entered.
- - If I visit the URL [http://localhost:3000/square_root/new](http://localhost:3000/square_root/new), I should see a form with a label and an input to enter a number.
+ - If I visit `/square_root/new`, I should see a form with a label and an input to enter a number.
     - If I submit that form, I should see the square root of the number that I entered.
- - If I visit the URL [http://localhost:3000/payment/new](http://localhost:3000/payment/new), I should see a form with labels and inputs to enter three values:
+ - If I visit `/payment/new`, I should see a form with labels and inputs to enter three values:
     - An APR (annual percentage rate). (Since our users are no longer limited to integers, we can avoid thinking in basis points. Phew!)
     - A number of _years_ remaining
     - The principal
     - If I submit that form, I should see the **monthly** payment due given the values that I entered.
- - If I visit the URL [http://localhost:3000/random/new](http://localhost:3000/random/new), I should see a form with labels and inputs to enter two numbers, a minimum and a maximum.
+ - If I visit `/random/new`, I should see a form with labels and inputs to enter two numbers, a minimum and a maximum.
     - If I submit that form, I should see a random number that falls between the numbers that I entered.
- - On the random number results page, add a link to _instantly_ re-calculate a new random number _from within the same range_, **without the user having to re-enter the minimum and maximum into the form again**.
 
 ## Part III: More Practice
 

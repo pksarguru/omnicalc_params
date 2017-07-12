@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OmnicalcParams</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>OmnicalcParams</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
 
-  <body>
+<body>
+  <div class="container">
     <%= yield %>
-  </body>
+  </div>
+
+  <div class="rails-toolbar">
+    <a href="/rails/git" target="_blank" class="rails-toolbar-button">
+      Git
+    </a>
+  </div>
+</body>
 </html>
